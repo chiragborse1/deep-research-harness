@@ -10,6 +10,8 @@ Nothing in this package imports a vendor LLM SDK. All model access goes through
 
 from __future__ import annotations
 
+from drh.errors import DrhError
+
 __version__ = "0.1.0"
 
-__all__ = ["__version__"]
+__all__ = ["DrhError", "__version__"]
