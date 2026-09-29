@@ -115,12 +115,16 @@ jobs:
         run: uv python install 3.12
       - name: Install project
         run: uv sync --locked --all-extras
+      - name: Export the resolved lockfile for auditing
+        run: uv export --format requirements-txt --no-emit-project --no-hashes -o requirements-audit.txt
       - name: pip-audit (known vulnerabilities in dependencies)
-        run: uv run pip-audit --strict
+        # Audits the exported lockfile rather than the installed environment: the project
+        # itself is an editable local install and is by definition not on PyPI.
+        run: uv run pip-audit --strict -r requirements-audit.txt
       - name: bandit (insecure code patterns)
         run: uv run bandit -r src --severity-level medium -f sarif -o bandit.sarif
       - name: Upload code scanning results
-        if: always()
+        if: always() && hashFiles('bandit.sarif') != ''
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: bandit.sarif

@@ -37,7 +37,9 @@ typecheck:  ## Run mypy --strict and the endpoint-independence gate.
 	$(PY) scripts/check_endpoint_independence.py
 
 security:  ## Run pip-audit and bandit.
-	$(UV) run pip-audit --strict
+	$(UV) export --format requirements-txt --no-emit-project --no-hashes -o requirements-audit.txt
+	$(UV) export --format requirements-txt --no-emit-project --no-hashes -o requirements-audit.txt
+	$(UV) run pip-audit --strict -r requirements-audit.txt
 	$(UV) run bandit -r src --severity-level medium
 
 bench:  ## Run the committed benchmark suite.
