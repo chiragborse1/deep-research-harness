@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-label="deep-research-harness: long-horizon research runs that survive being killed">
+  <title>deep-research-harness</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#58a6ff"/>
+      <stop offset="100%" stop-color="#3fb950"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1280" height="4" fill="url(#accent)"/>
+
+  <text x="72" y="150" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="58" font-weight="700" fill="#e6edf3">
+    deep-research-harness
+  </text>
+
+  <text x="72" y="212" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="30" fill="#8b949e">
+    Long-horizon research runs that survive being killed.
+  </text>
+
+  <g font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="23">
+    <rect x="72" y="278" width="330" height="52" rx="10" fill="#1f6feb" fill-opacity="0.16" stroke="#1f6feb" stroke-opacity="0.55"/>
+    <text x="100" y="312" fill="#79c0ff">crash-consistent run state</text>
+
+    <rect x="422" y="278" width="330" height="52" rx="10" fill="#1f6feb" fill-opacity="0.16" stroke="#1f6feb" stroke-opacity="0.55"/>
+    <text x="450" y="312" fill="#79c0ff">sandboxed tool execution</text>
+
+    <rect x="772" y="278" width="436" height="52" rx="10" fill="#238636" fill-opacity="0.16" stroke="#238636" stroke-opacity="0.55"/>
+    <text x="800" y="312" fill="#7ee787">veracity ledger for every claim</text>
+  </g>
+
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="21">
+    <rect x="72" y="382" width="1136" height="150" rx="12" fill="#010409" stroke="#30363d"/>
+
+    <text x="100" y="418" fill="#6e7681">$</text>
+    <text x="124" y="418" fill="#e6edf3">uv run drh demo</text>
+
+    <text x="100" y="452" fill="#7ee787">PLAN      ok   0.41s</text>
+    <text x="100" y="482" fill="#7ee787">FETCH     ok   2.08s   3 sources  (blob-addressed)</text>
+    <text x="100" y="512" fill="#d29922">EXTRACT   CRASH  simulated SIGKILL at t+4.11s</text>
+    <text x="100" y="540" fill="#7ee787">RESUME    ok   0.06s   state recovered, 0 work lost</text>
+  </g>
+
+  <text x="72" y="592" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="20" fill="#8b949e">
+    no vendor SDK in core  ·  no API key required  ·  Apache-2.0
+  </text>
+</svg>
