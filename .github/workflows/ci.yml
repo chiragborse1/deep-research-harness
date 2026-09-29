@@ -150,7 +150,7 @@ jobs:
     steps:
       - name: Fail if any required job failed
         run: |
-          for r in ${{ join(needs.*.result, chr(32)) }}; do
+          for r in ${{ join(needs.*.result, ' ') }}; do
             if [ "$r" != "success" ]; then
               echo "::error::A required job did not succeed: $r"
               exit 1
