@@ -21,8 +21,8 @@ One vertical slice per PR, each merged green. Status is updated as work lands.
 
 | # | Branch | Scope | Status |
 |---|---|---|---|
-| 1 | `chore/repo-scaffold` | Repo, CI, tooling, pre-commit, docs skeleton | in progress |
-| 2 | `feat/errors-typed-exception-hierarchy` | Typed errors, no bare `except:` | not started |
+| 1 | `chore/repo-scaffold` | Repo, CI, tooling, pre-commit, docs skeleton | **merged** ([#1](https://github.com/chiragborse1/deep-research-harness/pull/1)) |
+| 2 | `feat/errors-typed-exception-hierarchy` | Typed errors, no bare `except:` | in progress |
 | 3 | `feat/types-run-and-step-models` | pydantic domain models | not started |
 | 4 | `feat/provider-trait-and-mock` | `Provider` protocol + `MockProvider` | not started |
 | 5 | `feat/provider-http-adapters` | OpenAI-compatible, Anthropic, Ollama | not started |

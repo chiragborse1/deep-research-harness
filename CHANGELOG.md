@@ -11,7 +11,7 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 Nothing yet.
 
-## [0.1.0] - Unreleased
+## [0.1.0] - In progress
 
 ### Added
 
@@ -25,6 +25,10 @@ Nothing yet.
   is present in the environment.
 - Public-API docstring gate (`scripts/check_docs.py`).
 - `drh` console script with a `demo` subcommand that runs with no API key.
+- Typed exception hierarchy rooted at `DrhError`, with a `retryable` flag that drives the
+  executor's retry policy and JSON round-tripping that survives a process boundary.
+- Property-based tests (`hypothesis`) asserting the error round-trip is lossless for any
+  JSON-serializable context.
 
 [Unreleased]: https://github.com/chiragborse1/deep-research-harness/compare/v0.1.0...HEAD
 [0.1.0]: https://github.com/chiragborse1/deep-research-harness/releases/tag/v0.1.0
